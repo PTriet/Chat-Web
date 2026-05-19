@@ -91,39 +91,3 @@ Nguyễn Phan Triết — Full-stack Developer (Personal Project)
   * Selected conversation
   * Messages state
   * Online users state
-
----
-
-## 🚀 Cài đặt project
-
-### Clone project
-
-```bash
-git clone https://github.com/PTriet/Chat-Web.git
-```
-
-### Install dependencies
-
-```bash
-npm install
-npm install --prefix frontend
-```
-
-### Run backend
-
-```bash
-npm run server
-```
-
-### Run frontend
-
-```bash
-cd frontend
-npm run dev
-```
-
----
-
-## 🔗 Github Repository
-
-https://github.com/PTriet/Chat-Web
