@@ -8,8 +8,7 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
-import { app, server } from "./socket/socket.js"
-
+import { app, server } from "./socket/socket.js";
 
 const PORT = process.env.PORT || 8080;
 const __dirname = path.resolve();
@@ -30,7 +29,6 @@ app.use(express.static(path.join(__dirname, "/frontend/dist")));
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
-
 
 server.listen(PORT, () => {
   connectToMongoDB();

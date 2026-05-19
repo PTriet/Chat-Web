@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useConversation from "../zustand/useConversation";
 import toast from "react-hot-toast";
-import { useAuthContext } from "../context/AuthContext"
+import { useAuthContext } from "../context/AuthContext";
 
 const useSendMessage = () => {
   const [loading, setLoading] = useState(false);
@@ -24,17 +24,17 @@ const useSendMessage = () => {
       );
 
       const data = await res.json();
-if (data.error) throw new Error(data.error);
+      if (data.error) throw new Error(data.error);
 
-const newMessage = data.newMessage || data;
+      const newMessage = data.newMessage || data;
 
-setMessages((prevMessages) => [
-  ...prevMessages,
-  {
-    ...newMessage,
-    senderId: newMessage.senderId || authUser._id,
-  },
-]);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        {
+          ...newMessage,
+          senderId: newMessage.senderId || authUser._id,
+        },
+      ]);
     } catch (error) {
       toast.error(error.message);
     } finally {
